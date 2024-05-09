@@ -1,0 +1,26 @@
+{
+  "private": true,
+  "name": "workspace",
+  "scripts": {
+    "build": "sh ./scripts/build.sh",
+    "clean": "rm -rf node_modules build temp",
+    "format": "stylua .",
+    "lint": "sh ./scripts/analyze.sh && selene packages",
+    "lint:luau": "sh ./scripts/analyze.sh",
+    "lint:selene": "selene packages",
+    "prepare": "npmluau",
+    "style-check": "stylua . --check",
+    "test:roblox": "sh ./scripts/roblox-test.sh",
+    "verify-pack": "yarn workspaces foreach -A --no-private pack --dry-run"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "npmluau": "^0.1.1"
+  },
+  "keywords": [
+    "luau"
+  ],
+  "packageManager": "yarn@4.2.2"
+}

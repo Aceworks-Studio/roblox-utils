@@ -1,0 +1,20 @@
+{
+  "name": "@aceworks-studio/time",
+  "version": "0.1.0",
+  "description": "",
+  "author": "jeparlefrancais <jeparlefrancais21@gmail.com>",
+  "homepage": "https://github.com/Aceworks-Studio/roblox-utils#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aceworks-Studio/roblox-utils.git",
+    "directory": "packages/time"
+  },
+  "main": "src/init.lua",
+  "devDependencies": {
+    "@jsdotlua/jest": "^3.6.1-rc.2",
+    "@jsdotlua/jest-globals": "^3.6.1-rc.2"
+  },
+  "keywords": [
+    "luau"
+  ]
+}
