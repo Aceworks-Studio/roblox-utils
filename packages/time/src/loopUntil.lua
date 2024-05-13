@@ -1,4 +1,4 @@
-type LoopConfig = { interval: number, duration: number? }
+export type LoopConfig = { interval: number, duration: number? }
 export type Interval = number | LoopConfig
 
 local function loopUntil(interval: Interval, fn: (deltaTime: number) -> boolean): () -> ()
