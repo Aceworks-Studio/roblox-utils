@@ -1,11 +1,12 @@
-export type Interval = number | { duration: number, maxDuration: number? }
+type LoopConfig = { interval: number, duration: number? }
+export type Interval = number | LoopConfig
 
 local function loopUntil(interval: Interval, fn: (deltaTime: number) -> boolean): () -> ()
     local shouldContinue = true
 
     local isConfig = type(interval) ~= 'number'
-    local intervalTime = if isConfig then interval.duration else interval
-    local timeLeft = if isConfig then isConfig.maxDuration else math.huge
+    local intervalTime = if isConfig then (interval :: LoopConfig).interval else interval :: number
+    local timeLeft = if isConfig then (interval :: LoopConfig).duration or math.huge else math.huge
 
     local currentThread = task.spawn(function()
         local waitedTime = task.wait(intervalTime)
