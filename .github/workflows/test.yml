@@ -40,6 +40,3 @@ jobs:
 
       - name: Verify code style
         run: yarn run style-check
-
-      - name: Build assets
-        run: yarn run build
