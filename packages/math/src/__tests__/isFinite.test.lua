@@ -5,7 +5,7 @@ local expect = JestGlobals.expect
 local it = JestGlobals.it
 local each: <T>({ T }) -> (string, (T) -> ()) -> () = it.each :: any
 
-local trueValues = { 0, 1, 1e64, -4, -123456 }
+local trueValues = { 0, 1, 0.5, math.pi, 1e64, -4, -123456 }
 local falseValues = {
     math.huge,
     0 / 0,
