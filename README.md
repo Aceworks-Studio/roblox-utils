@@ -1,6 +1,6 @@
 # roblox-utils
 
-This project is a collection of small packages
+A suite of Luau utility packages designed to simplify common programming tasks.
 
 ## Installation
 
