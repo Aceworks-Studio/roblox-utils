@@ -2,7 +2,6 @@
   "private": true,
   "name": "workspace",
   "scripts": {
-    "build": "sh ./scripts/build.sh",
     "clean": "rm -rf node_modules build temp",
     "format": "stylua .",
     "lint": "sh ./scripts/analyze.sh && selene packages",

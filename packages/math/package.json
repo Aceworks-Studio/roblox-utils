@@ -1,7 +1,8 @@
 {
   "name": "@aceworks-studio/math",
   "version": "0.1.0",
-  "description": "",
+  "description": "A set of Luau utility functions related to math or numbers",
+  "license": "MIT",
   "author": "jeparlefrancais <jeparlefrancais21@gmail.com>",
   "homepage": "https://github.com/Aceworks-Studio/roblox-utils#readme",
   "repository": {
@@ -15,6 +16,7 @@
     "@jsdotlua/jest-globals": "^3.6.1-rc.2"
   },
   "keywords": [
-    "luau"
+    "luau",
+    "roblox"
   ]
 }

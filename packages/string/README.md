@@ -6,7 +6,7 @@
 
 # @aceworks-studio/string
 
-<!-- description -->
+A set of utility functions for string manipulation.
 
 ## Installation
 
@@ -22,5 +22,55 @@ Or if you are using `npm`:
 npm install @aceworks-studio/string
 ```
 
+## Content
+
+### endsWith
+
+```lua
+function endsWith(value: string, suffix: string): boolean
+```
+
+Checks if the given string `value` ends with the specified suffix `suffix`. Returns `true` if `value` ends with `suffix`, otherwise `false`.
+
+### startsWith
+
+```lua
+function startsWith(value: string, prefix: string): boolean
+```
+
+Checks if the given string `value` starts with the specified prefix `prefix`. Returns `true` if `value` starts with `prefix`, otherwise `false`.
+
+### trim
+
+```lua
+function trim(value: string): string
+```
+
+Removes whitespace from both ends of the given string. Returns the trimmed string.
+
+### trimEnd
+
+```lua
+function trimEnd(value: string): string
+```
+
+Removes whitespace from the end of the given string. Returns the trimmed string.
+
+### trimStart
+
+```lua
+function trimStart(value: string): string
+```
+
+Removes whitespace from the beginning of the given string. Returns the trimmed string.
+
+
 ## License
 
+This project is available under the MIT license. See [LICENSE.txt](../../LICENSE.txt) for details.
+
+## Other Lua Environments Support
+
+If you would like to use this library on a Lua environment where it is currently incompatible, open an issue (or comment on an existing one) to request the appropriate modifications.
+
+The library uses [darklua](https://github.com/seaofvoices/darklua) to process its code.
