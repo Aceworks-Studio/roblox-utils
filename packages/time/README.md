@@ -44,6 +44,16 @@ Continuously calls a function at specified intervals until a condition is met or
 
 Returns a function that cancel the loop.
 
+### loopWhile
+
+```lua
+function loopWhile(interval: Interval, fn: (deltaTime: number) -> boolean): () -> ()
+```
+
+Continuously calls a function at specified intervals while a condition is met. An optional timeout can be be provided using the [interval type](#interval-type).
+
+Returns a function that cancel the loop.
+
 ### noYield
 
 ```lua
