@@ -2,7 +2,7 @@ export type LoopConfig = { interval: number, duration: number? }
 export type Interval = number | LoopConfig
 
 local function loopUntil(interval: Interval, fn: (deltaTime: number) -> boolean): () -> ()
-    local shouldContinue = true
+    local shouldStop = false
 
     local isConfig = type(interval) ~= 'number'
     local intervalTime = if isConfig then (interval :: LoopConfig).interval else interval :: number
@@ -12,15 +12,15 @@ local function loopUntil(interval: Interval, fn: (deltaTime: number) -> boolean)
         local waitedTime = task.wait(intervalTime)
         timeLeft -= waitedTime
 
-        while shouldContinue and timeLeft > 0 do
-            shouldContinue = fn(waitedTime)
+        while (not shouldStop) and timeLeft > 0 do
+            shouldStop = fn(waitedTime)
             waitedTime = task.wait(intervalTime)
             timeLeft -= waitedTime
         end
     end)
 
     local function cancel()
-        shouldContinue = false
+        shouldStop = true
         task.cancel(currentThread)
     end
 
