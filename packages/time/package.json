@@ -1,6 +1,6 @@
 {
   "name": "@aceworks-studio/time",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A set of utility functions around time",
   "license": "MIT",
   "author": "jeparlefrancais <jeparlefrancais21@gmail.com>",

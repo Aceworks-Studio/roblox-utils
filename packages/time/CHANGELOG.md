@@ -1,5 +1,7 @@
 # Changelog
 
+## 0.2.1
+
 - fix `throttle` function ([#11](https://github.com/Aceworks-Studio/roblox-utils/pull/11))
 
 ## 0.2.0
