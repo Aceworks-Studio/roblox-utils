@@ -16,6 +16,7 @@ local function throttle<R..., T...>(durationSeconds: number, fn: (T...) -> R...)
         elseif not scheduled then
             scheduled = true
             task.delay(durationSeconds - deltaTime :: number, function(...)
+                lastCall = os.clock()
                 scheduled = false
                 fn(...)
             end, ...)
