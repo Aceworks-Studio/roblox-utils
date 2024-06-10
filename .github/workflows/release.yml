@@ -49,8 +49,46 @@ jobs:
         run: >-
           yarn workspaces foreach --all --no-private npm publish --access public --tolerate-republish
 
+  publish-package-github:
+    name: Publish package to GitHub
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Enable corepack
+        run: corepack enable
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: latest
+          registry-url: https://npm.pkg.github.com
+          cache: yarn
+          cache-dependency-path: yarn.lock
+
+      - name: Install packages
+        run: yarn install --immutable
+
+      - name: Run npmluau
+        run: yarn run prepare
+
+      - name: Authenticate yarn
+        run: |-
+          yarn config set npmAlwaysAuth true
+          yarn config set npmAuthToken $NPM_AUTH_TOKEN
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish to npm
+        run: >-
+          yarn workspaces foreach --all --no-private npm publish --access restricted --tolerate-republish
+
   create-release:
-    needs: publish-package
+    needs:
+      - publish-package
+      - publish-package-github
     name: Create release
     runs-on: ubuntu-latest
     outputs:
