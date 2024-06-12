@@ -1,13 +1,13 @@
 local createArrayGenerator = require('../array')
 
-export type CharacterGenerator = string | (() -> string)?
+export type CharacterSetGenerator = string | (() -> string)?
 
 export type StringGenerator = {
-    ofLength: (length: number, characterGenerator: CharacterGenerator) -> string,
+    ofLength: (length: number, characterGenerator: CharacterSetGenerator) -> string,
     between: (
         minLength: number,
         maxLength: number,
-        characterGenerator: CharacterGenerator,
+        characterGenerator: CharacterSetGenerator,
         substring: (value: string, length: number?) -> string
     ) -> string,
 }
@@ -20,7 +20,7 @@ local function createStringGenerator(random: Random): StringGenerator
         return string.char(byte)
     end
 
-    local function getCharacterFn(characterGenerator: CharacterGenerator)
+    local function getCharacterFn(characterGenerator: CharacterSetGenerator)
         if characterGenerator == nil then
             return defaultCharacterGenerator
         elseif type(characterGenerator) == 'string' then
@@ -41,7 +41,7 @@ local function createStringGenerator(random: Random): StringGenerator
         end
     end
 
-    local function ofLength(length: number, characterGenerator: CharacterGenerator): string
+    local function ofLength(length: number, characterGenerator: CharacterSetGenerator): string
         if length == 0 then
             return ''
         elseif length == 1 then
@@ -54,7 +54,7 @@ local function createStringGenerator(random: Random): StringGenerator
     local function between(
         minLength: number,
         maxLength: number,
-        characterGenerator: CharacterGenerator
+        characterGenerator: CharacterSetGenerator
     ): string
         if maxLength < minLength then
             maxLength, minLength = minLength, maxLength
