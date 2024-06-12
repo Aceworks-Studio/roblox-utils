@@ -7,9 +7,9 @@ export type StringGenerator = {
     between: (
         minLength: number,
         maxLength: number,
-        characterGenerator: CharacterSetGenerator,
-        substring: (value: string, length: number?) -> string
+        characterGenerator: CharacterSetGenerator
     ) -> string,
+    substring: (value: string, length: number?) -> string,
 }
 
 local function createStringGenerator(random: Random): StringGenerator

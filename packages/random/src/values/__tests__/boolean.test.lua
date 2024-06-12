@@ -15,13 +15,13 @@ beforeAll(function()
 end)
 
 it('returns a boolean when called', function()
-    for i = 1, FUZZ_COUNT do
+    for _ = 1, FUZZ_COUNT do
         expect(generator()).toEqual(expect.any('boolean'))
     end
 end)
 
 it('returns a boolean when called with a chance', function()
-    for i = 1, FUZZ_COUNT do
+    for _ = 1, FUZZ_COUNT do
         expect(generator(0.1)).toEqual(expect.any('boolean'))
     end
 end)

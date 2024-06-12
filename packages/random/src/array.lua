@@ -87,7 +87,7 @@ local function createArrayGenerator(random: Random): ArrayGenerator
 
         local result = shuffle(array)
 
-        for i = 1, toRemove do
+        for _ = 1, toRemove do
             table.remove(result, random:NextInteger(1, length))
             length -= 1
         end

@@ -24,7 +24,7 @@ each({
 })(
     'returns a number between %p and %p',
     function(minValue: number, maxValue: number)
-        for i = 1, FUZZ_COUNT do
+        for _ = 1, FUZZ_COUNT do
             local value = generator.between(minValue, maxValue)
 
             if maxValue < minValue then
@@ -43,7 +43,7 @@ each({
 })(
     'returns a number between %p and %p when generating with span of %p from %p',
     function(minValue: number, maxValue: number, span: number, value: number)
-        for i = 1, FUZZ_COUNT do
+        for _ = 1, FUZZ_COUNT do
             local result = generator.spread(value, span)
 
             expect(result).toBeGreaterThanOrEqual(minValue)
@@ -52,22 +52,15 @@ each({
     end :: any
 )
 
-it('returns a number between when generating with span', function()
-    for i = 1, FUZZ_COUNT do
-        local value = generator.sign()
-        expect(value == 1 or value == -1).toEqual(true)
-    end
-end)
-
 it('returns 1 or -1 when generating with sign', function()
-    for i = 1, FUZZ_COUNT do
+    for _ = 1, FUZZ_COUNT do
         local value = generator.sign()
         expect(value == 1 or value == -1).toEqual(true)
     end
 end)
 
 it('returns 1 or -1 when generating with sign with a chance', function()
-    for i = 1, FUZZ_COUNT do
+    for _ = 1, FUZZ_COUNT do
         local value = generator.sign(0.75)
         expect(value == 1 or value == -1).toEqual(true)
     end

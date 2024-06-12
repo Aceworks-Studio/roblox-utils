@@ -25,7 +25,7 @@ each({
 })(
     'returns an integer between %p and %p',
     function(minValue: number, maxValue: number)
-        for i = 1, FUZZ_COUNT do
+        for _ = 1, FUZZ_COUNT do
             local value = generator.between(minValue, maxValue)
 
             if maxValue < minValue then
@@ -42,7 +42,7 @@ each({
 each({ -15, 15, -5, 0, 10 })(
     'returns an integer above %p',
     function(minValue: number)
-        for i = 1, FUZZ_COUNT do
+        for _ = 1, FUZZ_COUNT do
             local value = generator.above(minValue)
             expect(value).toBeGreaterThanOrEqual(minValue)
             expect(Math.isSafeInteger(value)).toEqual(true)
@@ -53,7 +53,7 @@ each({ -15, 15, -5, 0, 10 })(
 each({ -15, 15, -5, 0, 10 })(
     'returns an integer below %p',
     function(maxValue: number)
-        for i = 1, FUZZ_COUNT do
+        for _ = 1, FUZZ_COUNT do
             local value = generator.below(maxValue)
             expect(value).toBeLessThanOrEqual(maxValue)
             expect(Math.isSafeInteger(value)).toEqual(true)
