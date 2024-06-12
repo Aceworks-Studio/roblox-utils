@@ -8,6 +8,9 @@ local jestRoots = {
         :FindFirstChild('math'),
     ReplicatedStorage:FindFirstChild('node_modules')
         :FindFirstChild('@aceworks-studio')
+        :FindFirstChild('random'),
+    ReplicatedStorage:FindFirstChild('node_modules')
+        :FindFirstChild('@aceworks-studio')
         :FindFirstChild('string'),
     ReplicatedStorage:FindFirstChild('node_modules')
         :FindFirstChild('@aceworks-studio')
