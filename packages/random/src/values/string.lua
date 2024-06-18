@@ -16,7 +16,7 @@ local function createStringGenerator(random: Random): StringGenerator
     local arrayGenerator = createArrayGenerator(random)
 
     local function defaultCharacterGenerator(): string
-        local byte = random:NextInteger(1, 128)
+        local byte = random:NextInteger(32, 126)
         return string.char(byte)
     end
 
