@@ -11,6 +11,7 @@ export type CharacterGenerator = createCharacterGenerator.CharacterGenerator
 export type ColorGenerator = createColorGenerator.ColorGenerator
 export type EnumGenerator = createEnumGenerator.EnumGenerator
 export type NumberGenerator = createNumberGenerator.NumberGenerator
+export type IntegerGenerator = createNumberGenerator.IntegerGenerator
 export type StringGenerator = createStringGenerator.StringGenerator
 export type CharacterSetGenerator = createStringGenerator.CharacterSetGenerator
 export type Vector2Generator = createVectorGenerators.Vector2Generator

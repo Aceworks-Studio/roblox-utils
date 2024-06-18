@@ -2,11 +2,13 @@ local Math = require('@pkg/@aceworks-studio/math')
 
 local createIntegerGenerator = require('./integer')
 
+export type IntegerGenerator = createIntegerGenerator.IntegerGenerator
+
 export type NumberGenerator = {
     between: (minValue: number, maxValue: number, decimals: number?) -> number,
     spread: (value: number, span: number) -> number,
     sign: (positiveChance: number?) -> number,
-    integer: createIntegerGenerator.IntegerGenerator,
+    integer: IntegerGenerator,
 }
 
 local function createNumberGenerator(random: Random): NumberGenerator
