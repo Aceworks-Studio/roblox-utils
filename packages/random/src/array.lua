@@ -3,7 +3,7 @@ export type ArrayGenerator = {
     between: <T>(minLength: number, maxLength: number, generator: () -> T) -> { T },
     shuffle: <T>(array: { T }) -> { T },
     shuffleInPlace: <T>(array: { T }) -> (),
-    pickElement: <T>(array: { T }) -> T?,
+    pickOne: <T>(array: { T }) -> T?,
     pickMultiple: <T>(array: { T }, count: number) -> { T },
     pickMultipleOnce: <T>(array: { T }, count: number) -> { T },
 }
@@ -40,7 +40,7 @@ local function createArrayGenerator(random: Random): ArrayGenerator
         random:Shuffle(array)
     end
 
-    local function pickElement<T>(array: { T }): T?
+    local function pickOne<T>(array: { T }): T?
         local length = #array
 
         if length == 0 then
@@ -55,13 +55,13 @@ local function createArrayGenerator(random: Random): ArrayGenerator
     local function pickMultiple<T>(array: { T }, count: number): { T }
         local length = #array
 
-        if length == 0 or count == 0 then
+        if length == 0 or count <= 0 then
             return {}
         elseif length == 1 then
             return table.create(count, array[1])
         end
 
-        local result = {}
+        local result = table.create(count)
 
         for i = 1, count do
             result[i] = array[random:NextInteger(1, length)]
@@ -73,7 +73,7 @@ local function createArrayGenerator(random: Random): ArrayGenerator
     local function pickMultipleOnce<T>(array: { T }, count: number): { T }
         local length = #array
 
-        if length == 0 or count == 0 then
+        if length == 0 or count <= 0 then
             return {}
         elseif length == 1 then
             return { array[1] }
@@ -100,7 +100,7 @@ local function createArrayGenerator(random: Random): ArrayGenerator
         between = between,
         shuffle = shuffle,
         shuffleInPlace = shuffleInPlace,
-        pickElement = pickElement,
+        pickOne = pickOne,
         pickMultiple = pickMultiple,
         pickMultipleOnce = pickMultipleOnce,
     }
