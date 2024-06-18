@@ -32,7 +32,11 @@ local arraySetup = {
         return weighted.array(value, { 1 })
     end,
     generator = function(value)
-        return weighted.array(value, { 1, 3, 5 })
+        local chanceArray = {}
+        for index in value do
+            table.insert(chanceArray, index * 1.5)
+        end
+        return weighted.array(value, chanceArray)
     end,
 }
 

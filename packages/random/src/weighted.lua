@@ -5,7 +5,7 @@ export type WeightedChoiceGenerator<T> = {
 }
 
 export type WeightedGenerator = {
-    array: <T>(list: { T }, weights: { number }) -> WeightedChoiceGenerator<T>,
+    array: <T>(elements: { T }, weights: { number }) -> WeightedChoiceGenerator<T>,
     map: <T>(map: { [T]: number }) -> WeightedChoiceGenerator<T>,
 }
 
@@ -158,6 +158,12 @@ local function createWeightedChoiceGenerator(random: Random): WeightedGenerator
     end
 
     local function weightedArray<T>(elements: { T }, weights: { number }): WeightedChoiceGenerator<T>
+        if _G.DEV and #elements ~= #weights then
+            error(
+                'attempt to create WeightedChoiceGenerator without the same '
+                    .. `amount of elements ({#elements}) and weights ({#weights})`
+            )
+        end
         local sum = 0
         local thresholds = {}
 

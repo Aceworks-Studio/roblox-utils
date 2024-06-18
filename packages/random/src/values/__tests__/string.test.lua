@@ -76,4 +76,13 @@ describe('substring', function()
             expect(#result).toEqual(i)
         end
     end)
+
+    it('returns the same string if the length is larger than the given string', function()
+        for i = 1, 20 do
+            local value = generator.ofLength(i)
+            local result = generator.substring(value, i + math.random(1, 10))
+
+            expect(result).toEqual(value)
+        end
+    end)
 end)
