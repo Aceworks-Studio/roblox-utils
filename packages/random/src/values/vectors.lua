@@ -13,7 +13,7 @@ export type Vector2Generator = VectorGenerator<Vector2> & {
 }
 export type Vector3Generator = VectorGenerator<Vector3> & {
     inSphere: (radius: number, center: Vector3?) -> Vector3,
-    inVolume: (size: Vector3, center: Vector3) -> Vector3,
+    inBox: (size: Vector3, center: Vector3) -> Vector3,
 }
 
 export type VectorsGenerator = {
@@ -86,7 +86,7 @@ local function createVectorGenerators(random: Random): VectorsGenerator
         return (center or Vector3.zero) + angle * actualRadius
     end
 
-    local function inVolume(size: Vector3, center: Vector3?): Vector3
+    local function inBox(size: Vector3, center: Vector3?): Vector3
         local x = random:NextNumber() - 0.5
         local y = random:NextNumber() - 0.5
         local z = random:NextNumber() - 0.5
@@ -104,7 +104,7 @@ local function createVectorGenerators(random: Random): VectorsGenerator
             unit = vector3Unit,
             ofLength = vector3OfLength,
             inSphere = inSphere,
-            inVolume = inVolume,
+            inBox = inBox,
         },
     }
 end

@@ -122,12 +122,12 @@ describe('inRectangle', function()
     end)
 end)
 
-describe('inVolume', function()
+describe('inBox', function()
     it('returns a point inside the volume', function()
         for _ = 1, FUZZ_COUNT do
             local center = generator.vector3.inSphere(1000)
             local size = generator.vector3.inSphere(100):Abs()
-            local value = generator.vector3.inVolume(size, center)
+            local value = generator.vector3.inBox(size, center)
 
             expect(value.X).toBeGreaterThanOrEqual(center.X - size.X / 2)
             expect(value.X).toBeLessThanOrEqual(center.X + size.X / 2)
