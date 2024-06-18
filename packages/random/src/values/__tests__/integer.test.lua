@@ -44,6 +44,17 @@ each({ -15, 15, -5, 0, 10 })(
     function(minValue: number)
         for _ = 1, FUZZ_COUNT do
             local value = generator.above(minValue)
+            expect(value).toBeGreaterThan(minValue)
+            expect(Math.isSafeInteger(value)).toEqual(true)
+        end
+    end :: any
+)
+
+each({ -15, 15, -5, 0, 10 })(
+    'returns an integer above or equal to %p',
+    function(minValue: number)
+        for _ = 1, FUZZ_COUNT do
+            local value = generator.aboveOrEqual(minValue)
             expect(value).toBeGreaterThanOrEqual(minValue)
             expect(Math.isSafeInteger(value)).toEqual(true)
         end
@@ -55,6 +66,17 @@ each({ -15, 15, -5, 0, 10 })(
     function(maxValue: number)
         for _ = 1, FUZZ_COUNT do
             local value = generator.below(maxValue)
+            expect(value).toBeLessThan(maxValue)
+            expect(Math.isSafeInteger(value)).toEqual(true)
+        end
+    end :: any
+)
+
+each({ -15, 15, -5, 0, 10 })(
+    'returns an integer below or equal to %p',
+    function(maxValue: number)
+        for _ = 1, FUZZ_COUNT do
+            local value = generator.belowOrEqual(maxValue)
             expect(value).toBeLessThanOrEqual(maxValue)
             expect(Math.isSafeInteger(value)).toEqual(true)
         end
