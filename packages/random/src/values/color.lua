@@ -1,10 +1,10 @@
 export type ColorGenerator = {
-    saturated: (saturation: number?) -> Color3,
+    saturated: (saturation: number?, value: number?) -> Color3,
     brightness: (hue: number, saturation: number?) -> Color3,
     spreadHue: (color: Color3, hueSpan: number) -> Color3,
     gray: () -> Color3,
-    black: (chance: number?) -> Color3,
-    white: (chance: number?) -> Color3,
+    black: (chance: number?, fallback: Color3?) -> Color3,
+    white: (chance: number?, fallback: Color3?) -> Color3,
 }
 
 local function createColorGenerator(random: Random): ColorGenerator
@@ -37,11 +37,11 @@ local function createColorGenerator(random: Random): ColorGenerator
     local WHITE = Color3.new(1, 1, 1)
 
     local function black(chance: number?, fallback: Color3?): Color3
-        return if random:NextNumber() >= (chance or 0.5) then BLACK else (fallback or WHITE)
+        return if random:NextNumber() <= (chance or 0.5) then BLACK else (fallback or WHITE)
     end
 
     local function white(chance: number?, fallback: Color3?): Color3
-        return if random:NextNumber() >= (chance or 0.5) then WHITE else (fallback or BLACK)
+        return if random:NextNumber() <= (chance or 0.5) then WHITE else (fallback or BLACK)
     end
 
     return {
