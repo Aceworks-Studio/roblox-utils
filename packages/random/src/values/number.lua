@@ -32,7 +32,7 @@ local function createNumberGenerator(random: Random): NumberGenerator
     end
 
     local function sign(positiveChance: number?): number
-        return if random:NextNumber() > (positiveChance or 0.5) then 1 else -1
+        return if random:NextNumber() <= (positiveChance or 0.5) then 1 else -1
     end
 
     return {
