@@ -20,7 +20,7 @@ local function createNumberGenerator(random: Random): NumberGenerator
         local alpha = random:NextNumber()
         local value = minValue + alpha * (maxValue - minValue)
 
-        if decimals ~= nil and decimals > 0 then
+        if decimals ~= nil then
             return Math.round(value, decimals)
         else
             return value
