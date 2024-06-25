@@ -5,10 +5,20 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@aceworks-studio/math@workspace:packages/math":
+"@aceworks-studio/math@workspace:^, @aceworks-studio/math@workspace:packages/math":
   version: 0.0.0-use.local
   resolution: "@aceworks-studio/math@workspace:packages/math"
   dependencies:
+    "@jsdotlua/jest": "npm:^3.6.1-rc.2"
+    "@jsdotlua/jest-globals": "npm:^3.6.1-rc.2"
+  languageName: unknown
+  linkType: soft
+
+"@aceworks-studio/random@workspace:packages/random":
+  version: 0.0.0-use.local
+  resolution: "@aceworks-studio/random@workspace:packages/random"
+  dependencies:
+    "@aceworks-studio/math": "workspace:^"
     "@jsdotlua/jest": "npm:^3.6.1-rc.2"
     "@jsdotlua/jest-globals": "npm:^3.6.1-rc.2"
   languageName: unknown

@@ -1,0 +1,26 @@
+{
+  "name": "@aceworks-studio/random",
+  "version": "0.1.0",
+  "description": "A Luau utility library to work with randomness",
+  "license": "MIT",
+  "author": "jeparlefrancais <jeparlefrancais21@gmail.com>",
+  "homepage": "https://github.com/Aceworks-Studio/roblox-utils#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aceworks-Studio/roblox-utils.git",
+    "directory": "packages/random"
+  },
+  "keywords": [
+    "luau",
+    "roblox",
+    "random"
+  ],
+  "main": "src/init.lua",
+  "dependencies": {
+    "@aceworks-studio/math": "workspace:^"
+  },
+  "devDependencies": {
+    "@jsdotlua/jest": "^3.6.1-rc.2",
+    "@jsdotlua/jest-globals": "^3.6.1-rc.2"
+  }
+}

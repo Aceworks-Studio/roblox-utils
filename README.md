@@ -19,6 +19,7 @@ npm install @aceworks-studio/math @aceworks-studio/string @aceworks-studio/time
 ## Content
 
 - [`math` documentation](./packages/math/README.md#content)
+- [`random` documentation](./packages/random/README.md#content)
 - [`string` documentation](./packages/string/README.md#content)
 - [`time` documentation](./packages/time/README.md#content)
 
