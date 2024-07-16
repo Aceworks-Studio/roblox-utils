@@ -76,6 +76,7 @@ jobs:
 
       - name: Authenticate yarn
         run: |-
+          yarn config set npmRegistryServer https://npm.pkg.github.com
           yarn config set npmAlwaysAuth true
           yarn config set npmAuthToken $NPM_AUTH_TOKEN
         env:
