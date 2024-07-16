@@ -1,6 +1,6 @@
 {
   "name": "@aceworks-studio/random",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Luau utility library to work with randomness",
   "license": "MIT",
   "author": "jeparlefrancais <jeparlefrancais21@gmail.com>",
