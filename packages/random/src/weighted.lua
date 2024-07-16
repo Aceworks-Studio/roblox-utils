@@ -70,8 +70,8 @@ local function createWeightedChoiceGenerator(random: Random): WeightedGenerator
                 local value = maxThreshold * random:NextNumber()
 
                 for i, threshold in thresholds do
-                    if value >= threshold then
-                        return elements[i + 1]
+                    if value <= threshold then
+                        return elements[i]
                     end
                 end
 
