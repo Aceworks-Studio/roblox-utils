@@ -40,6 +40,14 @@ function isInteger(value: number): boolean
 
 Returns `true` if the number is [finite](#isfinite) and a whole number (no decimal part).
 
+## isSafeInteger
+
+```lua
+function isSafeInteger(value: number): boolean
+```
+
+Returns `true` if the number is [finite](#isfinite), a whole number (no decimal part) and no other number rounds to it.
+
 ### isNaN
 
 ```lua
@@ -55,6 +63,14 @@ function lerp(initialValue: number, finalValue: number, alpha: number): number
 ```
 
 Returns a number interpolated between an initial value and a final value using a number `alpha` between 0 and 1.
+
+### round
+
+```lua
+function round(value: number, decimals: number?): number
+```
+
+Returns a number rounded with the given decimals, or rounded to the nearest integer.
 
 ## License
 
