@@ -1,6 +1,6 @@
 {
   "name": "@aceworks-studio/string",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A set of Luau utility functions for Lua string manipulation",
   "license": "MIT",
   "author": "jeparlefrancais <jeparlefrancais21@gmail.com>",

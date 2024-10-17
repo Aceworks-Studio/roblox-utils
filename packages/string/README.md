@@ -24,6 +24,14 @@ npm install @aceworks-studio/string
 
 ## Content
 
+### contains
+
+```lua
+function contains(value: string, substring: string): boolean
+```
+
+Checks if the given string `value` contains `substring`.
+
 ### endsWith
 
 ```lua
