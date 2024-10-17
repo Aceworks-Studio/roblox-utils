@@ -28,10 +28,10 @@ local arraySetup = {
     empty = function()
         return weighted.array({}, {})
     end,
-    generatorSingle = function(value)
+    generatorSingle = function<T>(value: { T })
         return weighted.array(value, { 1 })
     end,
-    generator = function(value)
+    generator = function<T>(value: { T })
         local chanceArray = {}
         for index in value do
             table.insert(chanceArray, index * 1.5)
@@ -56,14 +56,14 @@ local mapSetup = {
     empty = function()
         return weighted.map({})
     end,
-    generatorSingle = function(value)
+    generatorSingle = function<T>(value: { T })
         local chanceMap = {}
         for index, item in value do
             chanceMap[item] = index
         end
         return weighted.map(chanceMap)
     end,
-    generator = function(value)
+    generator = function<T>(value: { T })
         local chanceMap = {}
         for index, item in value do
             chanceMap[item] = index
