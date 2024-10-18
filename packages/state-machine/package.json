@@ -1,0 +1,28 @@
+{
+  "name": "@aceworks-studio/state-machine",
+  "version": "0.1.0",
+  "description": "A Luau utility to easily create simple state machines",
+  "license": "MIT",
+  "author": "jeparlefrancais <jeparlefrancais21@gmail.com>",
+  "homepage": "https://github.com/Aceworks-Studio/roblox-utils#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aceworks-Studio/roblox-utils.git",
+    "directory": "packages/state-machine"
+  },
+  "keywords": [
+    "luau",
+    "roblox",
+    "state"
+  ],
+  "main": "src/init.lua",
+  "dependencies": {
+    "luau-disk": "^0.1.1",
+    "luau-task": "^1.0.1",
+    "luau-teardown": "^0.1.4"
+  },
+  "devDependencies": {
+    "@jsdotlua/jest": "^3.6.1-rc.2",
+    "@jsdotlua/jest-globals": "^3.6.1-rc.2"
+  }
+}
