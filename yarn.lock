@@ -24,6 +24,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@aceworks-studio/state-machine@workspace:packages/state-machine":
+  version: 0.0.0-use.local
+  resolution: "@aceworks-studio/state-machine@workspace:packages/state-machine"
+  dependencies:
+    "@jsdotlua/jest": "npm:^3.6.1-rc.2"
+    "@jsdotlua/jest-globals": "npm:^3.6.1-rc.2"
+    luau-disk: "npm:^0.1.1"
+    luau-task: "npm:^1.0.1"
+    luau-teardown: "npm:^0.1.4"
+  languageName: unknown
+  linkType: soft
+
 "@aceworks-studio/string@workspace:packages/string":
   version: 0.0.0-use.local
   resolution: "@aceworks-studio/string@workspace:packages/string"
@@ -42,12 +54,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@jsdotlua/boolean@npm:^1.2.6":
-  version: 1.2.6
-  resolution: "@jsdotlua/boolean@npm:1.2.6"
+"@jsdotlua/boolean@npm:^1.2.7":
+  version: 1.2.7
+  resolution: "@jsdotlua/boolean@npm:1.2.7"
   dependencies:
-    "@jsdotlua/number": "npm:^1.2.6"
-  checksum: 10c0/5f567e556bb7c56102327a97468571522ce939be6cdc1b51591afc3dfc1dff4b2c9ec5462e7809bd9a515b3bdfc1c3eaabb4f631892cb5f471b4fc8da188cb84
+    "@jsdotlua/number": "npm:^1.2.7"
+  checksum: 10c0/a7342b8a5c5764a99446b91cf91e0e41ec789f468acdb5e657d33eb3c6c207b9c94590d318496466520cb8590b7f4c1baea0aca89798c7f88749f8d237e15c2f
   languageName: node
   linkType: hard
 
@@ -58,22 +70,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jsdotlua/collections@npm:^1.2.6":
-  version: 1.2.6
-  resolution: "@jsdotlua/collections@npm:1.2.6"
+"@jsdotlua/collections@npm:^1.2.7":
+  version: 1.2.7
+  resolution: "@jsdotlua/collections@npm:1.2.7"
   dependencies:
-    "@jsdotlua/es7-types": "npm:^1.2.6"
-    "@jsdotlua/instance-of": "npm:^1.2.6"
-  checksum: 10c0/a4b3fe826358484528f10e8ca61a80d841a6515a22277a003117449da66ea1fb891c7b4103b952b01bd7d75666f26cb41c8efb852672aa8aaaaebbcd656dca79
+    "@jsdotlua/es7-types": "npm:^1.2.7"
+    "@jsdotlua/instance-of": "npm:^1.2.7"
+  checksum: 10c0/ee4dc2129bdfb2c07a81027738335292f5a37329bd6b34d2be11589384fc6d37d0cdb2bf198d794ad764b188b2441c49d21eea2eedcbf27c8214f4a432164122
   languageName: node
   linkType: hard
 
-"@jsdotlua/console@npm:^1.2.6":
-  version: 1.2.6
-  resolution: "@jsdotlua/console@npm:1.2.6"
+"@jsdotlua/console@npm:^1.2.7":
+  version: 1.2.7
+  resolution: "@jsdotlua/console@npm:1.2.7"
   dependencies:
-    "@jsdotlua/collections": "npm:^1.2.6"
-  checksum: 10c0/eff658d9e8d23f932893facf18400a29ada54d1a24748b751aac1e4df48e92ff70b3b2ccd1ab6a4f2490dd709f826fe39427fb80f01a7574265fdd4e8af9187a
+    "@jsdotlua/collections": "npm:^1.2.7"
+  checksum: 10c0/0ea98ef96d23a78fadbcf365fe4f0fd6fc04c753305ed180550396ebb7084120c9224d18b323cea35f9261de94c6b29855cadb1d91c1961f3cdc888c4a319413
   languageName: node
   linkType: hard
 
@@ -96,10 +108,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jsdotlua/es7-types@npm:^1.2.6":
-  version: 1.2.6
-  resolution: "@jsdotlua/es7-types@npm:1.2.6"
-  checksum: 10c0/e5710f5f6de0608aec22744845e3a24acc47e2bda6cfc0b1fe4040935039b73e8467da90c3a6c9d75b08c9f39d2b98e9d72d54f3f630012538a7d53ad828a0d6
+"@jsdotlua/es7-types@npm:^1.2.7":
+  version: 1.2.7
+  resolution: "@jsdotlua/es7-types@npm:1.2.7"
+  checksum: 10c0/c639dfb8b6039a385424e24b6636cc12607ba1ff09da046ec37bd1af47b55a95f7a4b3ae8f4bdbd2f0b7bed08316e00e32debbc11afc0acf252182afe06a8f71
   languageName: node
   linkType: hard
 
@@ -120,10 +132,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jsdotlua/instance-of@npm:^1.2.6":
-  version: 1.2.6
-  resolution: "@jsdotlua/instance-of@npm:1.2.6"
-  checksum: 10c0/0958caf214bb0556c1dcf94096410c367f413af4b02ef3adbd733e47435d8734b583217804bed5aec8308d56ccfb39032bb12fd4337e01ec5ae2db690b2ca9ce
+"@jsdotlua/instance-of@npm:^1.2.7":
+  version: 1.2.7
+  resolution: "@jsdotlua/instance-of@npm:1.2.7"
+  checksum: 10c0/a3ebb3fd7750fb23afb26338eaa0e4c0dfe7badfd9180b4a72749a0d910269d484ce93c53bdb3219318576a87c175932bbe87466dbff870141b66541c5943eda
   languageName: node
   linkType: hard
 
@@ -478,34 +490,34 @@ __metadata:
   linkType: hard
 
 "@jsdotlua/luau-polyfill@npm:^1.2.6":
-  version: 1.2.6
-  resolution: "@jsdotlua/luau-polyfill@npm:1.2.6"
+  version: 1.2.7
+  resolution: "@jsdotlua/luau-polyfill@npm:1.2.7"
   dependencies:
-    "@jsdotlua/boolean": "npm:^1.2.6"
-    "@jsdotlua/collections": "npm:^1.2.6"
-    "@jsdotlua/console": "npm:^1.2.6"
-    "@jsdotlua/es7-types": "npm:^1.2.6"
-    "@jsdotlua/instance-of": "npm:^1.2.6"
-    "@jsdotlua/math": "npm:^1.2.6"
-    "@jsdotlua/number": "npm:^1.2.6"
-    "@jsdotlua/string": "npm:^1.2.6"
-    "@jsdotlua/timers": "npm:^1.2.6"
+    "@jsdotlua/boolean": "npm:^1.2.7"
+    "@jsdotlua/collections": "npm:^1.2.7"
+    "@jsdotlua/console": "npm:^1.2.7"
+    "@jsdotlua/es7-types": "npm:^1.2.7"
+    "@jsdotlua/instance-of": "npm:^1.2.7"
+    "@jsdotlua/math": "npm:^1.2.7"
+    "@jsdotlua/number": "npm:^1.2.7"
+    "@jsdotlua/string": "npm:^1.2.7"
+    "@jsdotlua/timers": "npm:^1.2.7"
     symbol-luau: "npm:^1.0.0"
-  checksum: 10c0/63265f9fde3b895400d12802929ddab5daed79efc4e2aa90325b2eea0e2b7addcf351d35ad8bb19955956e913c212408944d73b6f3126223893d17cecd24de61
+  checksum: 10c0/1f98940c9f7cff669c9202370e2faa1e577ec2c7fd32c85773fcf20a00a6255dc99dd49f8962799db30526f436b08af4d9710c86b2d2d30b9184da4b60620c5c
   languageName: node
   linkType: hard
 
-"@jsdotlua/math@npm:^1.2.6":
-  version: 1.2.6
-  resolution: "@jsdotlua/math@npm:1.2.6"
-  checksum: 10c0/06137df2a6352d4f5c730a7cf9e2902509d36de08415a3c70d470a05669dfeaf48e4aff2d5b6885a92b8f4d19fd0294a40f147a3f39c8558e887a09eb3ccd9e0
+"@jsdotlua/math@npm:^1.2.7":
+  version: 1.2.7
+  resolution: "@jsdotlua/math@npm:1.2.7"
+  checksum: 10c0/4e622511789a89d6c92c7c03856ac18763b402c1638b482df29dee43e56edd662b1131f27945919eb9a3960c26196767ca9e12bea118aa6c9781d2b10807291f
   languageName: node
   linkType: hard
 
-"@jsdotlua/number@npm:^1.2.6":
-  version: 1.2.6
-  resolution: "@jsdotlua/number@npm:1.2.6"
-  checksum: 10c0/74541fce86f80c52f05e5d4ca774d94f08ed21619af7b575c2bb7284e24fc2b178626c9888e286459a344d662cafab74d839ec8b95dcdab551fd14754911a292
+"@jsdotlua/number@npm:^1.2.7":
+  version: 1.2.7
+  resolution: "@jsdotlua/number@npm:1.2.7"
+  checksum: 10c0/ffb9ee335508f90f381419616e066bed3b294d3d77bbda73378fcabf3ccd1881b9f69364d1f4ed979e8b870c478a860a79921e12f7efbeb4b310e4208b75edfd
   languageName: node
   linkType: hard
 
@@ -551,30 +563,30 @@ __metadata:
   linkType: hard
 
 "@jsdotlua/react-is@npm:^17.1.0":
-  version: 17.1.0
-  resolution: "@jsdotlua/react-is@npm:17.1.0"
+  version: 17.2.0
+  resolution: "@jsdotlua/react-is@npm:17.2.0"
   dependencies:
-    "@jsdotlua/shared": "npm:^17.1.0"
-  checksum: 10c0/0133682ec6ab337f2e9e3983be484f994abe8303857dd77c351fc0f9fb7d154ba115ba5ca29460f90bd482c6bbe57a28b7ddea0f4954745aaf09d682b2939560
+    "@jsdotlua/shared": "npm:^17.2.0"
+  checksum: 10c0/b0d1dd43d789e8db524f5f5cbbe10621cd7adf2740e899c99a490570263b34eaa7a170875ae406319bd592a64a41b4b91feccef432b62461ee8e5dac4ece69f8
   languageName: node
   linkType: hard
 
-"@jsdotlua/shared@npm:^17.1.0":
-  version: 17.1.0
-  resolution: "@jsdotlua/shared@npm:17.1.0"
+"@jsdotlua/shared@npm:^17.2.0":
+  version: 17.2.0
+  resolution: "@jsdotlua/shared@npm:17.2.0"
   dependencies:
     "@jsdotlua/luau-polyfill": "npm:^1.2.6"
-  checksum: 10c0/23e0d4fec494e7059b116db3b89e9655cc772e19fe06f9ad92bc97a324cf8862b0f2e7aaffee89d0627c9a1abb793b254573f09860fa35caf21925a33b332376
+  checksum: 10c0/01cc74fdab68e34b5ba98bd5d5d09093606cc4f5ce59b0fe61da0dccb350194b8666bad9633ddba8c8ba18e3ff0846225d183ed4da7dc85388b97e2c0a78312b
   languageName: node
   linkType: hard
 
-"@jsdotlua/string@npm:^1.2.6":
-  version: 1.2.6
-  resolution: "@jsdotlua/string@npm:1.2.6"
+"@jsdotlua/string@npm:^1.2.7":
+  version: 1.2.7
+  resolution: "@jsdotlua/string@npm:1.2.7"
   dependencies:
-    "@jsdotlua/es7-types": "npm:^1.2.6"
-    "@jsdotlua/number": "npm:^1.2.6"
-  checksum: 10c0/de51c662439110642b699e4196240aa45ec4b8814f99bc606acb84dbb3f1c6889099bb722b3370f5873e06bd65c76779b5d94694309c9bdc63d324f40add2b0f
+    "@jsdotlua/es7-types": "npm:^1.2.7"
+    "@jsdotlua/number": "npm:^1.2.7"
+  checksum: 10c0/2a4fea39734748f5b0e188b143cd178f460e32998745faf3b99364cb51fdd354d77c9c2a2138f28a71c5dad2cf10112a4368017aa2c9b12c36d198b84ccb079c
   languageName: node
   linkType: hard
 
@@ -588,12 +600,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jsdotlua/timers@npm:^1.2.6":
-  version: 1.2.6
-  resolution: "@jsdotlua/timers@npm:1.2.6"
+"@jsdotlua/timers@npm:^1.2.7":
+  version: 1.2.7
+  resolution: "@jsdotlua/timers@npm:1.2.7"
   dependencies:
-    "@jsdotlua/collections": "npm:^1.2.6"
-  checksum: 10c0/f3ec2753894e4939f7dfdf0072517f1e769e4009b4bd882c9c6878526372753ac4b08b531e1a32c96b7bccb5bf10bb8e2f5730cbc70534da7eddc620fbccaaca
+    "@jsdotlua/collections": "npm:^1.2.7"
+  checksum: 10c0/ce7c1aeb0278436319325f45c6866f3a580453ca1e094ca9641421083268283b8e896a90e249108d89b8700fdd0571d39e687e94e2f27561628d5c83b33db673
   languageName: node
   linkType: hard
 
@@ -604,10 +616,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"luau-disk@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "luau-disk@npm:0.1.1"
+  checksum: 10c0/ee97edfe07671c3989f31b21cdef1001d845dbbc4940b41a2cb9b74e1c1bb0008c339348c595669177884ad8f0df4b6bf14ec66457854edcccb8e18fc3e9e4eb
+  languageName: node
+  linkType: hard
+
 "luau-regexp@npm:^0.2.1":
   version: 0.2.1
   resolution: "luau-regexp@npm:0.2.1"
   checksum: 10c0/7badc4e6f9ab7753d77e49db3012c525fb85dff70930c806754edd86893a39c1afb1aba51aba00b2f456f72d7f02c6a8812a160646a05986bc6d1bfae6251494
+  languageName: node
+  linkType: hard
+
+"luau-task@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "luau-task@npm:1.0.1"
+  checksum: 10c0/d2df6f26d9c5cdc1414c9941561c0dfcfed79cf889297cd245653d2004fe74508666eae704d5c6021fb7163513b7647e7d00608b0841077f410ded3d2dd383a2
+  languageName: node
+  linkType: hard
+
+"luau-teardown@npm:^0.1.4":
+  version: 0.1.4
+  resolution: "luau-teardown@npm:0.1.4"
+  checksum: 10c0/4e08d13ec8b0d20bea97fe92c9ce3163844751d73d1b6329679fbe24da5a912c7ea9061db5e935392c1d4d8309ebeae870f727651e843ec903a68edc1129ee0d
   languageName: node
   linkType: hard
 
