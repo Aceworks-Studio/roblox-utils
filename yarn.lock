@@ -525,6 +525,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@jsdotlua/path@npm:^3.6.1-rc.2":
+  version: 3.6.1-rc.2
+  resolution: "@jsdotlua/path@npm:3.6.1-rc.2"
+  dependencies:
+    "@jsdotlua/luau-polyfill": "npm:^1.2.6"
+  checksum: 10c0/60868d5161f3bfc263ebcddac8cbe83f6787f85409fc1a563ff350b9ccab05c88e934ccd7e3627ea77bd73f5e30b21dbe7d85e7a4d8445d3baf96cd42bab4877
+  languageName: node
+  linkType: hard
+
 "@jsdotlua/picomatch@npm:^0.4.0":
   version: 0.4.0
   resolution: "@jsdotlua/picomatch@npm:0.4.0"
@@ -615,15 +624,6 @@ __metadata:
   version: 0.1.1
   resolution: "luau-disk@npm:0.1.1"
   checksum: 10c0/ee97edfe07671c3989f31b21cdef1001d845dbbc4940b41a2cb9b74e1c1bb0008c339348c595669177884ad8f0df4b6bf14ec66457854edcccb8e18fc3e9e4eb
-  languageName: node
-  linkType: hard
-
-"luau-path@npm:^0.1.0":
-  version: 0.1.0
-  resolution: "luau-path@npm:0.1.0"
-  dependencies:
-    luau-disk: "npm:^0.1.1"
-  checksum: 10c0/bd991ee1ff2e9f2d23a8354f806ef63571e5ab93f3377a76abf72d48da0d16745d905847330fbcb1f52f09765690847b7db1ec91cea23b73edc8921ede7d695d
   languageName: node
   linkType: hard
 
