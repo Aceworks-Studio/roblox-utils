@@ -525,15 +525,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@jsdotlua/path@npm:^3.6.1-rc.2":
-  version: 3.6.1-rc.2
-  resolution: "@jsdotlua/path@npm:3.6.1-rc.2"
-  dependencies:
-    "@jsdotlua/luau-polyfill": "npm:^1.2.6"
-  checksum: 10c0/60868d5161f3bfc263ebcddac8cbe83f6787f85409fc1a563ff350b9ccab05c88e934ccd7e3627ea77bd73f5e30b21dbe7d85e7a4d8445d3baf96cd42bab4877
-  languageName: node
-  linkType: hard
-
 "@jsdotlua/picomatch@npm:^0.4.0":
   version: 0.4.0
   resolution: "@jsdotlua/picomatch@npm:0.4.0"
