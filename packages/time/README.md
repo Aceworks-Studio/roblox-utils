@@ -90,6 +90,148 @@ type Interval = number | { interval: number, duration: number? }
 
 The exported type `Interval` is used to provide a time interval in seconds with an optional maximum duration (in seconds too).
 
+### RefreshScheduler
+
+This utility class is designed to manage asynchronous requests efficiently within specified budgets, such as rate limits and concurrency constraints. It supports periodic refreshing of results, error handling, and provides hooks to react to changes in the request state.
+
+It is useful for scenarios where multiple requests need to be handled concurrently while adhering to resource or rate constraints, such as API requests or task processing systems.
+
+- [Constructor](#refreshscheduler-constructor)
+- [RefreshSchedulerOptions](#refreshscheduleroptions)
+- [getResult](#getresult)
+- [submit](#submit)
+- [remove](#remove)
+- [tick](#tick)
+- [teardown](#teardown)
+- [onChange](#onchange)
+
+#### RefreshScheduler Constructor
+
+```lua
+function RefreshScheduler.new<Request, Result>(
+    worker: (Request) -> Result,
+    options: RefreshSchedulerOptions<Request>
+): RefreshScheduler<Request, Result>
+```
+
+Creates a new `RefreshScheduler` object from a `worker` function and its options.
+
+**Parameters:**
+- `worker`: A function to process requests and generate results.
+- `options`: See [RefreshSchedulerOptions](#refreshscheduleroptions) for more details.
+
+**Returns:** `RefreshScheduler<Request, Result>`
+
+#### RefreshSchedulerOptions
+
+This type defines the configuration options for creating a `RefreshScheduler` object. These options allow you to customize key behaviors, such as how requests are identified, rate-limiting parameters, concurrency constraints, refresh intervals and error handling.
+
+```lua
+type RefreshSchedulerOptions<Request> = {
+    -- Function to generate a key for each request. Requests
+    -- that generate the same key are considered to be the same
+    -- requests.
+    -- If not provided, the request itself must be a string.
+    getKey: ((Request) -> string)?,
+
+    -- Number of requests allowed within the rate limit interval.
+    rateLimitBudget: number,
+
+    -- The interval, in seconds, for replenishing the rate
+    -- limit budget. Defaults to 60 seconds.
+    rateLimitInterval: number?,
+
+    -- Maximum number of requests that can be processed
+    -- concurrently. Defaults to 1.
+    concurrencyBudget: number?,
+
+    -- Default interval, in seconds, for refreshing requests.
+    -- Defaults to infinity, which means no automatic refresh.
+    refreshInterval: number?,
+
+    -- Function that returns the current time. Defaults to os.clock.
+    -- Useful for testing.
+    clock: (() -> number)?,
+
+    -- The interval, in seconds, for automatically calling the `tick`
+    -- method. If not provided, `tick` must be called manually.
+    tickInterval: number?,
+
+    -- A function to call whenever the `worker` encounters an error.
+    -- Receives the error and the associated request as arguments.
+    onError: (err: any, request: Request) -> ()?,
+}
+```
+
+#### getResult
+
+```lua
+function RefreshScheduler:getResult<Request, Result>(request: Request): Result?
+```
+
+Fetches the cached result of a request if it exists.
+
+**Parameters:**
+- `request`: The request to retrieve the result for.
+
+**Returns:** The cached result if available, otherwise `nil`.
+
+#### submit
+
+```lua
+function RefreshScheduler:submit<Request, Result>(request: Request, refreshInterval: number?)
+```
+
+Submits a new request to the scheduler. The request will be processed by the `worker` function, and the result will be cached and refreshed at the specified interval.
+
+**Parameters:**
+- `request`: The request to submit.
+- `refreshInterval`: The interval in seconds to refresh the result (default: `refreshInterval` specified in options).
+
+#### remove
+
+```lua
+function RefreshScheduler:remove<Request, Result>(request: Request)
+```
+
+Removes a request from the scheduler, stopping any associated refresh or processing.
+
+**Parameters:**
+- `request`: The request to remove.
+
+#### tick
+
+```lua
+function RefreshScheduler:tick<Request, Result>()
+```
+
+Manually advances the scheduler, processing any queued requests or refreshing results as needed.
+
+**Note:** if the `tickInterval` option was specified when creating the scheduler, this function **should not be called**, as it will be called automatically.
+
+#### teardown
+
+```lua
+function RefreshScheduler:teardown<Request, Result>()
+```
+
+Cleans up the scheduler, canceling all ongoing processes and clearing internal caches.
+
+#### onChange
+
+```lua
+function RefreshScheduler:onChange<Request, Result>(
+    callback: (Request, Result) -> ()
+): () -> ()
+```
+
+Registers a function that will be called whenever the result of a request changes.
+
+**Parameters:**
+- `callback` (function): The function to call when a result changes. Receives the `request` and the new `result` as arguments.
+
+**Returns:** A function that disconnects the listener.
+
 ## License
 
 This project is available under the MIT license. See [LICENSE.txt](../../LICENSE.txt) for details.
