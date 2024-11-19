@@ -2,7 +2,8 @@
   "languageMode": "strict",
   "lintErrors": true,
   "lint": {
-    "*": true
+    "*": true,
+    "LocalShadow": false
   },
   "aliases": {
     "pkg": "./node_modules/.luau-aliases"

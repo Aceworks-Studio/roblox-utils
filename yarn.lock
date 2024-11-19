@@ -49,8 +49,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@aceworks-studio/time@workspace:packages/time"
   dependencies:
+    "@aceworks-studio/math": "workspace:^"
     "@jsdotlua/jest": "npm:^3.6.1-rc.2"
     "@jsdotlua/jest-globals": "npm:^3.6.1-rc.2"
+    luau-disk: "npm:^0.1.1"
+    luau-signal: "npm:^0.1.1"
+    luau-teardown: "npm:^0.1.4"
   languageName: unknown
   linkType: soft
 
@@ -627,6 +631,15 @@ __metadata:
   version: 0.2.1
   resolution: "luau-regexp@npm:0.2.1"
   checksum: 10c0/7badc4e6f9ab7753d77e49db3012c525fb85dff70930c806754edd86893a39c1afb1aba51aba00b2f456f72d7f02c6a8812a160646a05986bc6d1bfae6251494
+  languageName: node
+  linkType: hard
+
+"luau-signal@npm:^0.1.1":
+  version: 0.1.1
+  resolution: "luau-signal@npm:0.1.1"
+  dependencies:
+    luau-task: "npm:^1.0.1"
+  checksum: 10c0/fbe6dff361946ffca415b4dea4852641c756f3d82161603d8cf0cbb130a8e9b470f67acc03f6cc193affaf4f021801ad8daebceb1f9d600e4d1108c38d3d0380
   languageName: node
   linkType: hard
 

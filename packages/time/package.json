@@ -10,13 +10,19 @@
     "url": "git+https://github.com/Aceworks-Studio/roblox-utils.git",
     "directory": "packages/time"
   },
-  "main": "src/init.lua",
-  "devDependencies": {
-    "@jsdotlua/jest": "^3.6.1-rc.2",
-    "@jsdotlua/jest-globals": "^3.6.1-rc.2"
-  },
   "keywords": [
     "luau",
     "roblox"
-  ]
+  ],
+  "main": "src/init.lua",
+  "dependencies": {
+    "@aceworks-studio/math": "workspace:^",
+    "luau-disk": "^0.1.1",
+    "luau-signal": "^0.1.1",
+    "luau-teardown": "^0.1.4"
+  },
+  "devDependencies": {
+    "@jsdotlua/jest": "^3.6.1-rc.2",
+    "@jsdotlua/jest-globals": "^3.6.1-rc.2"
+  }
 }

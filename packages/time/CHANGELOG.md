@@ -1,5 +1,7 @@
 # Changelog
 
+- add `RefreshScheduler` class ([#23](https://github.com/Aceworks-Studio/roblox-utils/pull/23))
+
 ## 0.2.1
 
 - fix `throttle` function ([#11](https://github.com/Aceworks-Studio/roblox-utils/pull/11))
