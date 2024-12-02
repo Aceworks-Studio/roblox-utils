@@ -84,13 +84,12 @@ local function createArrayGenerator(random: Random): ArrayGenerator
         end
 
         local result = table.clone(array)
+        random:Shuffle(result)
         local toRemove = length - count
 
         for _ = 1, toRemove do
             table.remove(result)
         end
-
-        random:Shuffle(result)
 
         return result
     end
