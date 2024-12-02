@@ -12,7 +12,7 @@ local fnMock
 
 beforeEach(function()
     fnMock, fn = jest.fn()
-    fnMock.mockReturnValue(false)
+    fnMock.mockReturnValue(true)
 end)
 
 it('runs the function once', function()
@@ -21,13 +21,13 @@ it('runs the function once', function()
 end)
 
 it('runs the function twice', function()
-    fnMock.mockReturnValueOnce(true)
+    fnMock.mockReturnValueOnce(false)
     yieldUntil(1 / 60, fn)
     expect(fnMock).toHaveBeenCalledTimes(2)
 end)
 
 it('runs the function until the duration has passed', function()
-    fnMock.mockReturnValue(true)
+    fnMock.mockReturnValue(false)
     yieldUntil({ interval = 1 / 60, duration = 0.5 }, fn)
     expect(fnMock).toHaveBeenCalled()
 end)

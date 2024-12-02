@@ -1,10 +1,10 @@
 local loopUntil = require('./loopUntil')
 
-type Interval = loopUntil.Interval
-type LoopConfig = loopUntil.LoopConfig
+export type Interval = loopUntil.Interval
+export type LoopConfig = loopUntil.LoopConfig
 
 local function yieldUntil(interval: Interval, fn: (deltaTime: number) -> boolean)
-    local shouldContinue = true
+    local shouldStop = false
 
     local isConfig = type(interval) ~= 'number'
     local intervalTime = if isConfig then (interval :: LoopConfig).interval else interval :: number
@@ -13,8 +13,13 @@ local function yieldUntil(interval: Interval, fn: (deltaTime: number) -> boolean
     local waitedTime = task.wait(intervalTime)
     timeLeft -= waitedTime
 
-    while shouldContinue and timeLeft > 0 do
-        shouldContinue = fn(waitedTime)
+    while timeLeft > 0 do
+        shouldStop = fn(waitedTime)
+
+        if shouldStop then
+            break
+        end
+
         waitedTime = task.wait(intervalTime)
         timeLeft -= waitedTime
     end
