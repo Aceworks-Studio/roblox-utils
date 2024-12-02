@@ -1,5 +1,7 @@
 # Changelog
 
+## 0.1.2
+
 - Fix array `pickMultipleOnce` function ([#24](https://github.com/Aceworks-Studio/roblox-utils/pull/24))
 
 ## 0.1.1
