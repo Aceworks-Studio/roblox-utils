@@ -1,5 +1,7 @@
 # Changelog
 
+## 0.3.0
+
 - add `yieldWhile` function ([#27](https://github.com/Aceworks-Studio/roblox-utils/pull/27))
 - fix `yieldUntil` to stop when the condition is `true` instead of `false` ([#26](https://github.com/Aceworks-Studio/roblox-utils/pull/26))
 - add `RefreshScheduler` class ([#23](https://github.com/Aceworks-Studio/roblox-utils/pull/23))
