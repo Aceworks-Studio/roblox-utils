@@ -1,0 +1,27 @@
+{
+  "name": "@aceworks-studio/spatial-data",
+  "version": "0.1.0",
+  "description": "A Luau utility to work with spatial data",
+  "license": "MIT",
+  "author": "jeparlefrancais <jeparlefrancais21@gmail.com>",
+  "homepage": "https://github.com/Aceworks-Studio/roblox-utils#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aceworks-Studio/roblox-utils.git",
+    "directory": "packages/spatial-data"
+  },
+  "keywords": [
+    "luau",
+    "roblox",
+    "spatial",
+    "data"
+  ],
+  "main": "src/init.lua",
+  "dependencies": {
+    "luau-disk": "^0.1.1"
+  },
+  "devDependencies": {
+    "@jsdotlua/jest": "^3.6.1-rc.2",
+    "@jsdotlua/jest-globals": "^3.6.1-rc.2"
+  }
+}

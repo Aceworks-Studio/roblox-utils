@@ -11,6 +11,9 @@ local jestRoots = {
         :FindFirstChild('random'),
     ReplicatedStorage:FindFirstChild('node_modules')
         :FindFirstChild('@aceworks-studio')
+        :FindFirstChild('spatial-data'),
+    ReplicatedStorage:FindFirstChild('node_modules')
+        :FindFirstChild('@aceworks-studio')
         :FindFirstChild('state-machine'),
     ReplicatedStorage:FindFirstChild('node_modules')
         :FindFirstChild('@aceworks-studio')

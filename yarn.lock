@@ -24,6 +24,18 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@aceworks-studio/spatial-data@workspace:packages/spatial-data":
+  version: 0.0.0-use.local
+  resolution: "@aceworks-studio/spatial-data@workspace:packages/spatial-data"
+  dependencies:
+    "@jsdotlua/jest": "npm:^3.6.1-rc.2"
+    "@jsdotlua/jest-globals": "npm:^3.6.1-rc.2"
+    luau-disk: "npm:^0.1.1"
+    luau-task: "npm:^1.0.1"
+    luau-teardown: "npm:^0.1.4"
+  languageName: unknown
+  linkType: soft
+
 "@aceworks-studio/state-machine@workspace:packages/state-machine":
   version: 0.0.0-use.local
   resolution: "@aceworks-studio/state-machine@workspace:packages/state-machine"
