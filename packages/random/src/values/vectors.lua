@@ -52,7 +52,7 @@ local function createVectorGenerators(random: Random): VectorsGenerator
             centerY = center.Y
         end
 
-        local actualRadius = radius * random:NextNumber()
+        local actualRadius = radius * math.sqrt(random:NextNumber())
 
         return Vector2.new(
             centerX + actualRadius * math.cos(angle),
@@ -82,7 +82,7 @@ local function createVectorGenerators(random: Random): VectorsGenerator
 
     local function inSphere(radius: number, center: Vector3?): Vector3
         local angle = random:NextUnitVector()
-        local actualRadius = radius * random:NextNumber()
+        local actualRadius = radius * (random:NextNumber() ^ (1 / 3))
         return (center or Vector3.zero) + angle * actualRadius
     end
 
