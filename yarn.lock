@@ -31,8 +31,6 @@ __metadata:
     "@jsdotlua/jest": "npm:^3.6.1-rc.2"
     "@jsdotlua/jest-globals": "npm:^3.6.1-rc.2"
     luau-disk: "npm:^0.1.1"
-    luau-task: "npm:^1.0.1"
-    luau-teardown: "npm:^0.1.4"
   languageName: unknown
   linkType: soft
 
