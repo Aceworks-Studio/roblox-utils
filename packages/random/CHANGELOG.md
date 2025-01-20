@@ -1,5 +1,7 @@
 # Changelog
 
+- Fix `inCircle` and `inSphere` functions to generate uniform points ([#29](https://github.com/Aceworks-Studio/roblox-utils/pull/29))
+
 ## 0.1.2
 
 - Fix array `pickMultipleOnce` function ([#24](https://github.com/Aceworks-Studio/roblox-utils/pull/24))
