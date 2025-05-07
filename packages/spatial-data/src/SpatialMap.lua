@@ -61,6 +61,10 @@ function SpatialMap:add<T>(position: Vector3, item: T): (Vector3) -> ()
             return
         end
 
+        if newPosition then
+            value.position = newPosition
+        end
+
         local newHashPosition = newPosition and self:getMapPosition(newPosition)
 
         if newHashPosition ~= nil and newHashPosition == hashPosition then
@@ -85,7 +89,6 @@ function SpatialMap:add<T>(position: Vector3, item: T): (Vector3) -> ()
 
         if newHashPosition then
             hashPosition = newHashPosition
-            value.position = newPosition :: Vector3
             if self._spaceMap[newHashPosition] == nil then
                 self._spaceMap[newHashPosition] = { value }
             else

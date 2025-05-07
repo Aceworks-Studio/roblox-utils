@@ -48,6 +48,19 @@ describe('getInsideSphere', function()
 
             expect(map:getInsideSphere(awayFromPosition, awayFactor / 2)).toEqual({})
         end)
+
+        it(
+            `creates an item, moves it and get it back from the moved position at ({position})`,
+            function()
+                local item = 'oof'
+
+                local updatePosition = map:add(awayFromPosition, item)
+
+                updatePosition(position)
+
+                expect(map:getInsideSphere(position, 0.5)).toEqual({ item })
+            end
+        )
     end
 end)
 
