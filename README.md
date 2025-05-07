@@ -20,6 +20,7 @@ npm install @aceworks-studio/math @aceworks-studio/string @aceworks-studio/time
 
 - [`math` documentation](./packages/math/README.md#content)
 - [`random` documentation](./packages/random/README.md#content)
+- [`spatial-data` documentation](./packages/spatial-data/README.md#content)
 - [`state-machine` documentation](./packages/state-machine/README.md#content)
 - [`string` documentation](./packages/string/README.md#content)
 - [`time` documentation](./packages/time/README.md#content)

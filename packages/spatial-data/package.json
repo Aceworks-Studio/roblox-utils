@@ -1,6 +1,6 @@
 {
   "name": "@aceworks-studio/spatial-data",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Luau utility to work with spatial data",
   "license": "MIT",
   "author": "jeparlefrancais <jeparlefrancais21@gmail.com>",
